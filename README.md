@@ -22,9 +22,6 @@
 
     https://console.cloud.google.com/cloud-resource-manager
 
-    
-    
-
 4. Запускаем python run.py
 
 Ссылка на google_sheets_table

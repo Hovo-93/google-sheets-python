@@ -9,12 +9,12 @@ def database(values):
     usd_rate = float(get_xml().replace(',', '.'))
     connection = False
     try:
-        connection = getDb_Connection()
+        connection = get_db_connection()
         # Создание курсора для выполнения операций с базой данных
         cursor = connection.cursor()
 
         # Выполнение команды: это создает новую таблицу
-        cursor.execute(getCreate_DbQuery())
+        cursor.execute(get_create_db_query())
         connection.commit()
 
         print("Таблица успешно создана в PostgreSQL")
@@ -44,19 +44,19 @@ def database(values):
 
 
 # Подключение к базе
-def getDb_Connection():
+def get_db_connection():
     load_dotenv()
 
     return psycopg2.connect(
         host=os.getenv('HOST'),
         database=os.getenv('DATABASE'),
-        user=os.getenv('USER'),
-        password=os.getenv('PASSWORD')
+        user=os.getenv('DB_USER'),
+        password=os.getenv('DB_PASSWORD')
     )
 
 
 # SQL-запрос для создания новой таблицы
-def getCreate_DbQuery():
+def get_create_db_query():
     return '''
                 DROP TABLE IF  EXISTS data;
                 CREATE TABLE  data (
