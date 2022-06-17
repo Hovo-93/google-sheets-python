@@ -4,8 +4,8 @@ import httplib2
 from dotenv import load_dotenv
 from googleapiclient import discovery
 from oauth2client.service_account import ServiceAccountCredentials
-from DbWorker import database
-from PrepareData import prepare_date
+from db_worker import database
+from prepare_data import prepare_date
 
 load_dotenv()
 # Файл, полученный в Google Developer Console

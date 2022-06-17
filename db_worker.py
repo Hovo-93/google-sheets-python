@@ -2,7 +2,7 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 from psycopg2 import Error
-from GetXmlData import get_xml
+from get_xml_data import get_xml
 
 
 def database(values):
