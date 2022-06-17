@@ -1,24 +1,31 @@
 Для запуска
 
-1.(Создаем .env файл)
+1. pip install -r requirements.txt
 
-    spreadsheet_id = "10lbps1OABCyOWO3cVJvT_CQ5-6s9QUC9iqe-rkz5-G8"
+
+2. Создаем БД и прописываем данные в .env файл
+
+
+    SPREADSHEET_ID='10lbps1OABCyOWO3cVJvT_CQ5-6s9QUC9iqe-rkz5-G8'
     HOST='127.0.0.1'
     DATABASE='postgres'
     USER='postgres'
-    PASSWORD='1111'
+    PASSWORD='password'
 
-2.run.py
+3. Добавить настройки Google Developer Console
 
-    'Использовать, полученный в Google Developer Console example.json 
-     либо попросить у меня '
+
+    Использовать, полученный в Google Developer Console example.json 
+    либо попросить у меня
+
+    Закинуть в корневую директорию проекта файл настроек Google Developer Console по названию credentials.json
+
     https://console.cloud.google.com/cloud-resource-manager
-    1.CREDENTIALS_FILE = example.json
-    Полученный example.json сохраняем в директории 
-    # ID Google Sheets документа (можно взять из его URL)
-    2. spreadsheet_id = spreadsheet_id
 
-3. Запускаем python run.py
+    
+    
+
+4. Запускаем python run.py
 
 Ссылка на google_sheets_table
 
